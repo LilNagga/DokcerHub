@@ -4,18 +4,185 @@
     <!-- Metadatos esenciales -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de ejemplo básica en HTML5 puro.">
+    <meta name="description" content="Página de ejemplo básica en HTML5 puro con CSS sencillo.">
 
     <!-- Título que aparece en la pestaña del navegador -->
-    <title>Página HTML5 de Ejemplo</title>
+    <title>Página HTML5 de Ejemplo con CSS</title>
 
-    <!-- Nota: No incluimos enlaces a CSS ni scripts para mantenerlo "puro HTML" -->
+    <!-- Estilos CSS Sencillos -->
+    <style>
+        /* Estilos generales para el cuerpo del documento */
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fuente legible */
+            line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+            margin: 0; /* Eliminar margen por defecto */
+            padding: 0;
+            background-color: #f4f4f4; /* Color de fondo gris claro */
+            color: #333; /* Color de texto principal oscuro */
+        }
+
+        /* Contenedor principal para centrar contenido y limitar ancho */
+        /* (Aplicado directamente al body para simplicidad, a menudo se usa un div wrapper) */
+        body {
+            max-width: 960px; /* Ancho máximo del contenido */
+            margin: 20px auto; /* Centrar el contenido horizontalmente con margen superior/inferior */
+            padding: 20px; /* Espacio interno */
+            background-color: #fff; /* Fondo blanco para el área de contenido */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave alrededor */
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #333; /* Fondo oscuro */
+            color: #fff; /* Texto blanco */
+            padding: 1rem 0; /* Relleno vertical */
+            text-align: center; /* Centrar texto */
+            margin-bottom: 20px; /* Espacio debajo del header */
+        }
+
+        header h1 {
+            margin: 0; /* Quitar margen por defecto del h1 */
+            padding-bottom: 10px; /* Espacio bajo el título principal */
+        }
+
+        /* Navegación */
+        nav {
+            margin-top: 10px; /* Espacio sobre la navegación */
+        }
+
+        nav h2 {
+             /* Ocultar visualmente si el contexto es obvio, pero mantener para accesibilidad */
+             /* position: absolute;
+             left: -9999px; */
+             /* O simplemente darle un estilo más discreto */
+             font-size: 1em;
+             margin-bottom: 5px;
+             color: #ccc; /* Color gris claro para el título de navegación */
+             text-transform: uppercase; /* Mayúsculas */
+             letter-spacing: 1px; /* Espaciado entre letras */
+        }
+
+        nav ul {
+            list-style: none; /* Quitar viñetas */
+            padding: 0; /* Quitar relleno por defecto */
+            text-align: center; /* Centrar elementos de lista */
+        }
+
+        nav ul li {
+            display: inline-block; /* Mostrar elementos en línea */
+            margin: 0 15px; /* Espacio horizontal entre elementos */
+        }
+
+        nav ul li a {
+            color: #fff; /* Color de enlace blanco */
+            text-decoration: none; /* Quitar subrayado */
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ddd; /* Color al pasar el ratón */
+        }
+
+        /* Contenido Principal */
+        main {
+            padding-bottom: 20px; /* Espacio antes del footer */
+        }
+
+        /* Artículo y Secciones */
+        article, section {
+            margin-bottom: 20px; /* Espacio debajo de cada artículo/sección */
+        }
+
+        h2, h3 {
+            color: #555; /* Color gris oscuro para subtítulos */
+            border-bottom: 1px solid #eee; /* Línea sutil debajo */
+            padding-bottom: 5px; /* Espacio bajo la línea */
+        }
+
+        /* Barra Lateral (Aside) */
+        aside {
+            background-color: #f9f9f9; /* Fondo ligeramente diferente */
+            border: 1px solid #eee; /* Borde sutil */
+            padding: 15px;
+            margin-top: 20px; /* Espacio sobre el aside */
+        }
+
+        aside h3 {
+            margin-top: 0; /* Quitar margen superior del h3 dentro del aside */
+        }
+
+        /* Figuras e Imágenes */
+        figure {
+            margin: 20px 0; /* Margen vertical */
+            text-align: center; /* Centrar imagen y leyenda */
+        }
+
+        figure img {
+            max-width: 100%; /* Hacer la imagen responsiva */
+            height: auto; /* Mantener proporción */
+            border: 1px solid #ccc; /* Borde ligero alrededor de la imagen */
+            padding: 4px; /* Pequeño espacio entre imagen y borde */
+        }
+
+        figcaption {
+            margin-top: 8px; /* Espacio sobre la leyenda */
+            font-size: 0.9em; /* Texto ligeramente más pequeño */
+            color: #555; /* Color gris */
+            font-style: italic; /* Cursiva */
+        }
+
+        /* Elemento Code */
+        code {
+            background-color: #e8e8e8; /* Fondo gris claro */
+            padding: 2px 5px; /* Relleno pequeño */
+            border-radius: 3px; /* Esquinas redondeadas */
+            font-family: Consolas, Monaco, monospace; /* Fuente monoespaciada */
+        }
+
+        /* Pie de Página */
+        footer {
+            text-align: center; /* Centrar texto */
+            margin-top: 30px; /* Espacio sobre el footer */
+            padding-top: 15px; /* Espacio interno superior */
+            border-top: 1px solid #ccc; /* Línea separadora */
+            font-size: 0.9em; /* Texto ligeramente más pequeño */
+            color: #555; /* Color gris */
+        }
+
+        footer address {
+            font-style: normal; /* Quitar cursiva por defecto de address */
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #007bff; /* Color azul para enlaces en footer */
+        }
+        footer a:hover {
+            color: #0056b3; /* Azul más oscuro al pasar el ratón */
+        }
+
+        /* Estilos generales para enlaces */
+        a {
+             color: #007bff; /* Color azul estándar para enlaces */
+             text-decoration: none; /* Quitar subrayado por defecto */
+        }
+        a:hover {
+             text-decoration: underline; /* Subrayar al pasar el ratón */
+             color: #0056b3; /* Color más oscuro */
+        }
+
+    </style>
+
+    <!-- Nota: En un proyecto real, los estilos CSS irían en un archivo .css separado
+         y se enlazarían usando:
+         <link rel="stylesheet" href="style.css">
+    -->
 </head>
 <body>
 
     <!-- Encabezado Principal de la Página -->
     <header>
-        <h1>Mi Página Web HTML5 que no sirve</h1>
+        <h1>Mi Página Web HTML5 (¡Ahora con Estilo!)</h1>
         <nav>
             <!-- Menú de Navegación Simple -->
             <h2>Navegación</h2>
@@ -32,20 +199,20 @@
         <!-- Una sección autocontenida (como un post de blog) -->
         <article>
             <h2>Artículo Principal</h2>
-            <p>Este es el primer párrafo de nuestro artículo principal. Aquí podemos hablar sobre el tema central de la página.</p>
-            <p>HTML5 introduce muchos elementos semánticos como <code><header></code>, <code><nav></code>, <code><main></code>, <code><article></code>, <code><section></code>, <code><aside></code>, y <code><footer></code> que ayudan a estructurar el contenido de manera más significativa.</p>
+            <p>Este es el primer párrafo de nuestro artículo principal. Aquí podemos hablar sobre el tema central de la página. Ahora, con CSS, el texto es más legible y la estructura general es más clara.</p>
+            <p>HTML5 introduce muchos elementos semánticos como <code><header></code>, <code><nav></code>, <code><main></code>, <code><article></code>, <code><section></code>, <code><aside></code>, y <code><footer></code> que ayudan a estructurar el contenido de manera más significativa. El CSS añadido aprovecha estos elementos para aplicar estilos.</p>
 
             <!-- Ejemplo de Figura con Imagen y Leyenda -->
             <figure>
                 <!-- Nota: Reemplaza 'imagen.jpg' con una URL real o ruta a una imagen -->
-                <img src="https://via.placeholder.com/300x150.png?text=Imagen+Ejemplo" alt="Descripción descriptiva de la imagen de ejemplo">
-                <figcaption>Esta es una leyenda para la imagen de ejemplo.</figcaption>
+                <img src="https://via.placeholder.com/300x150.png?text=Imagen+Ejemplo+Estilizada" alt="Descripción descriptiva de la imagen de ejemplo">
+                <figcaption>Esta es una leyenda para la imagen de ejemplo, ahora centrada y estilizada.</figcaption>
             </figure>
 
              <!-- Otra sección dentro del artículo -->
              <section id="acerca">
                  <h3>Subsección: Acerca de</h3>
-                 <p>Podemos dividir el contenido en secciones lógicas.</p>
+                 <p>Podemos dividir el contenido en secciones lógicas. Esta sección tiene un título con un borde inferior sutil.</p>
                  <ul>
                      <li>Elemento de lista 1</li>
                      <li>Elemento de lista 2</li>
@@ -57,7 +224,7 @@
         <!-- Contenido Relacionado o Lateral -->
         <aside>
             <h3>Contenido Relacionado</h3>
-            <p>Esto podría ser una barra lateral con enlaces adicionales, publicidad, o información complementaria.</p>
+            <p>Esto podría ser una barra lateral con enlaces adicionales, publicidad, o información complementaria. Ahora tiene un fondo y borde distintos.</p>
             <ul>
                 <li><a href="#">Enlace relacionado 1</a></li>
                 <li><a href="#">Enlace relacionado 2</a></li>
@@ -74,6 +241,7 @@
             Visítanos en: Calle Falsa 123, Ciudad Ejemplo.
         </address>
         <p><small>© 2023 Mi Sitio Web. Todos los derechos reservados.</small></p>
+        <p><small>Página con HTML semántico y CSS básico.</small></p>
     </footer>
 
 </body>

@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!-- Metadatos esenciales -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>paro</title>
-    <h1>paro yaaaaaaa</h1>
+    <meta name="description" content="Página de ejemplo básica en HTML5 puro.">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Página HTML5 de Ejemplo</title>
+
+    <!-- Nota: No incluimos enlaces a CSS ni scripts para mantenerlo "puro HTML" -->
 </head>
 <body>
-    
+
+    <!-- Encabezado Principal de la Página -->
+    <header>
+        <h1>Mi Página Web HTML5</h1>
+        <nav>
+            <!-- Menú de Navegación Simple -->
+            <h2>Navegación</h2>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de la Página -->
+    <main id="inicio">
+        <!-- Una sección autocontenida (como un post de blog) -->
+        <article>
+            <h2>Artículo Principal</h2>
+            <p>Este es el primer párrafo de nuestro artículo principal. Aquí podemos hablar sobre el tema central de la página.</p>
+            <p>HTML5 introduce muchos elementos semánticos como <code><header></code>, <code><nav></code>, <code><main></code>, <code><article></code>, <code><section></code>, <code><aside></code>, y <code><footer></code> que ayudan a estructurar el contenido de manera más significativa.</p>
+
+            <!-- Ejemplo de Figura con Imagen y Leyenda -->
+            <figure>
+                <!-- Nota: Reemplaza 'imagen.jpg' con una URL real o ruta a una imagen -->
+                <img src="https://via.placeholder.com/300x150.png?text=Imagen+Ejemplo" alt="Descripción descriptiva de la imagen de ejemplo">
+                <figcaption>Esta es una leyenda para la imagen de ejemplo.</figcaption>
+            </figure>
+
+             <!-- Otra sección dentro del artículo -->
+             <section id="acerca">
+                 <h3>Subsección: Acerca de</h3>
+                 <p>Podemos dividir el contenido en secciones lógicas.</p>
+                 <ul>
+                     <li>Elemento de lista 1</li>
+                     <li>Elemento de lista 2</li>
+                     <li>Elemento de lista 3</li>
+                 </ul>
+             </section>
+        </article>
+
+        <!-- Contenido Relacionado o Lateral -->
+        <aside>
+            <h3>Contenido Relacionado</h3>
+            <p>Esto podría ser una barra lateral con enlaces adicionales, publicidad, o información complementaria.</p>
+            <ul>
+                <li><a href="#">Enlace relacionado 1</a></li>
+                <li><a href="#">Enlace relacionado 2</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer id="contacto">
+        <p>Información de contacto:</p>
+        <address>
+            Puedes contactarnos en <a href="mailto:ejemplo@dominio.com">ejemplo@dominio.com</a>.<br>
+            Visítanos en: Calle Falsa 123, Ciudad Ejemplo.
+        </address>
+        <p><small>© 2023 Mi Sitio Web. Todos los derechos reservados.</small></p>
+    </footer>
+
 </body>
 </html>
